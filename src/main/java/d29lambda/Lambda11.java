@@ -13,17 +13,20 @@ public class Lambda11 {
         myList.add("Elif");
         myList.add("Zeynep");
         myList.add("Mustafa");
+        List<String> donusList= bestenCokBuyuk(myList);
+        System.out.println(donusList); // [ZEYNEP, MUSTAFA]
 
-        List<String> donusList = bestenCokBuyuk(myList);
-        System.out.println(donusList); //[ZEYNEP, MUSTAFA]
 
-    }
+    } // main disi
 
     //ornek 11: Bir List'teki karakter sayisi 5’den cok olan tum elemanlari
     // buyuk harflerle bir listin icinde veren method'u olusturunuz.
-    public static List<String> bestenCokBuyuk(List<String> myList){
-        //return myList.stream().filter(t -> t.length() > 5).map(t->t.toUpperCase()).collect(Collectors.toList());
-        return myList.stream().filter(t -> t.length() > 5).map(String::toUpperCase).collect(Collectors.toList());
 
+    public static List<String> bestenCokBuyuk (List<String> myList){
+       // return myList.stream().filter(t -> t.length() >5).map(t -> t.toUpperCase()).collect(Collectors.toList());
+        return myList.stream().filter(t -> t.length() >5).map(String::toUpperCase).collect(Collectors.toList()); // best practice
     }
-}
+
+
+
+}// class disi

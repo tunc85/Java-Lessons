@@ -59,6 +59,7 @@ public class Lambda07 {
                 reduce(Math::min).
                 get();
         System.out.println(min); //2
+
     }
 
 }

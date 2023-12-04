@@ -20,7 +20,7 @@ public class Lambda09 {
     // console'a yazdiran method'u olusturunuz.
 
     public static void eHaric(List<String> myList){
-        myList.stream().filter(t -> !t.startsWith("E")).forEach(t -> System.out.print(t + " "));
+        myList.stream().filter(t -> !t.startsWith("E") ).forEach(t -> System.out.print(t + " "));
         //Ali Yusuf Zeynep Mustafa
     }
 

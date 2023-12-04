@@ -12,14 +12,17 @@ public class Lambda10 {
         myList.add("Elif");
         myList.add("Zeynep");
         myList.add("Mustafa");
-        bestenAzTekrarsiz(myList);
+       bestenAzTekrarsiz(myList);
 
     } //main disi
     //ornek 10: Bir List'te karakter sayisi 5’den az olan tum elemanlari
     // tekrarsiz olarak console'a yazdiran method'u olusturunuz.
 
     public static void bestenAzTekrarsiz(List<String> myList){
-        myList.stream().distinct().filter(t -> t.length() < 5).forEach(t -> System.out.print(t + " ")); //Ali Elif
+        myList.stream().distinct().filter(t -> t.length() < 5).forEach(t -> System.out.println(t + " ")); // Ali Elif
+
     }
+
+
 
 }

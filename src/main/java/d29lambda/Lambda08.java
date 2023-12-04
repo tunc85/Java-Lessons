@@ -21,10 +21,11 @@ public class Lambda08 {
     public static void enKucukCift(List<Integer> nums){
         //Integer min = nums.stream().filter(t -> t > 7 && t % 2 == 0).sorted().reduce((t,u)->t).get();
         //System.out.println(min); //10
-        Integer min = nums.stream().filter(t -> t > 7 && t % 2 == 0).sorted(). //10, 14
-        findFirst(). //10
+        Integer min = nums.stream().filter(t -> t > 7 && t % 2 == 0).sorted().
+                findFirst().//10
                 get();
-        System.out.println(min); //10
+        System.out.println(min); // 10
+
     }
 
 

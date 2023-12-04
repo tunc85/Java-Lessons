@@ -17,9 +17,10 @@ public class Lambda13 {
 
     //ornek 13: Bir List'teki elemanlari tekrarsiz olarak, buyuk harflerle, alfabetik sirada
     // console'a yazdiran method'u olusturunuz.
-    public static void tekrarsizBuyuk(List<String> myList) {
-        myList.stream().distinct().map(t -> t.toUpperCase()).sorted().forEach(t -> System.out.print(t + " "));
-        //ALİ ELİF MUSTAFA YUSUF ZEYNEP
-    }
+    public static void  tekrarsizBuyuk(List<String> myList){
+        myList.stream().distinct().map(t -> t.toUpperCase()).sorted().forEach(t-> System.out.print(t + " "));
+        // ALI ELIF MUSTAFA YUSUF ZEYNEP
+
+}
 
 }
