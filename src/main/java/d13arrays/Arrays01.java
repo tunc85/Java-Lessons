@@ -43,6 +43,9 @@ public class Arrays01 {
         System.out.println(maxiumum);//44
         System.out.println("Toplam : " + (minimum+maxiumum)); // 59
 
+        String ogrenci = "Bölüm";
+        
+
 
 
 

@@ -21,7 +21,10 @@ public class Lambda08 {
     public static void enKucukCift(List<Integer> nums){
         //Integer min = nums.stream().filter(t -> t > 7 && t % 2 == 0).sorted().reduce((t,u)->t).get();
         //System.out.println(min); //10
-        Integer min = nums.stream().filter(t -> t > 7 && t % 2 == 0).sorted().
+        Integer min = nums.
+                stream(). // akis  basladi
+                filter(t -> t > 7 && t % 2 == 0). //  7 den buyuk ve cift olanlar
+                sorted(). // natural order a gore sıraladik (a-z A-Z 0-9 )
                 findFirst().//10
                 get();
         System.out.println(min); // 10

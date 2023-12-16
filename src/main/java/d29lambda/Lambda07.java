@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Lambda07 {
     public static void main(String[] args) {
-        List<Integer> nums = new ArrayList<>(Arrays.asList(2, 3, 4, 5, 11, 10));
+        List<Integer> nums = new ArrayList<>(Arrays.asList(2, 3, 4, 5, 11, 10,10));
         //minimum1(nums);
         //minimum2(nums);
         //minimum3(nums);
@@ -14,7 +14,7 @@ public class Lambda07 {
 
     //7)Verilen List'teki "minimum değeri" bulmak için bir method oluşturun
     //1.yol:
-    public static void minimum1(List<Integer> nums){ //2, 3, 4, 5, 11, 10
+    public static void minimum1(List<Integer> nums){ //2, 3, 4, 5, 11, 10 ,
        Integer min = nums.
                stream().
                distinct().
@@ -47,7 +47,9 @@ public class Lambda07 {
     }
     //4.yol:
     public static void minimum4(List<Integer> nums){
-        Integer min = nums.stream().distinct().reduce((t,u) -> Math.min(t,u)).get();
+        Integer min = nums.stream().
+                distinct().
+                reduce((t,u) ->  Math.min(t,u)).get();
         System.out.println(min); //2
     }
 

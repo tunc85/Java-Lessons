@@ -17,7 +17,11 @@ public class Lambda04 {
         //reduce()azaltmak: Koleksiyon elemanlarını tek bir değere indirger.
         //ornegin iki sayiyi toplayalim. 3 + 5 = 8'e indirgendi
 
-        int toplam = nums.stream().distinct().filter(t -> t % 2 == 0).map(t -> t * t).reduce(0, Integer::sum);
+        int toplam = nums.stream().
+                distinct(). // tekrarli olanlari sildik
+                filter(t -> t % 2 == 0).  // kabul kosul sart
+                map(t -> t * t). // degisiklik ve uzerinde oynama
+                reduce(0, Integer::sum); //
         System.out.println(toplam); //104
 
          /*Java’da method reference, lambda ifadelerine bir alternatif olarak sunulan bir özelliktir.

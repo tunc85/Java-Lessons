@@ -21,7 +21,7 @@ public class Lambda01 {
         bir ifade içerebilir.
         5- Bir veya daha fazla parametre alabilir: Lambda ifadeleri, bir veya daha fazla parametre alabilir.
 
-        Lambda ifadelerine bazen "arrow functions" da denir ->
+        Lambda ifadelerine bazen "arrow functions" da denir  ->
          */
         /*1) Lambda Functional Programming'dir, digeri "Structured -yapisal Programming" dir
         Structured Programming: Yapısal programlama, programların belirli yapılar veya kontrol yapıları
@@ -29,10 +29,10 @@ public class Lambda01 {
         2) Functional programming, Collection'lar ve Arrayler ile yaygin olarak kullanilir.(map'lerde direkt kullanilmaz
         entrySet ile Set'e cevrilirse kullanilabilir)*/
         List<Integer> nums = new ArrayList<>(Arrays.asList(12, 9, 131, 14, 9, 10, 4, 12, 15));
-        //printElements1(nums);
+        printElements1(nums);
         //printElements2(nums);
         //ciftleriYazdir1(nums);
-        ciftleriYazdir2(nums);
+        //ciftleriYazdir2(nums);
 
     } //main disi
 
@@ -40,9 +40,11 @@ public class Lambda01 {
     // yazdiran method'u olusturunuz.(Structured == Yapisal)
     public static void printElements1(List<Integer> nums){
         for (Integer w : nums){
-            System.out.print(w + " "); //12 9 131 14 9 10 4 12 15
+            System.out.print(w + " " ); //12 9 131 14 9 10 4 12 15
+
         }
     }
+
 
     //2) Bir list'teki elemanlari ayni satirda aralarina bosluk koyarak
     //   yazdiran method'u olusturunuz.(Functional)
@@ -76,7 +78,7 @@ public class Lambda01 {
         nums.
                 stream().
                 filter(t -> t % 2 == 0).
-                forEach(t -> System.out.print(t + " ")); //12 14 10 4 12
+                forEach(t -> System.out.print(t + " "));  // 12 14 10 4 12
 
     }
 

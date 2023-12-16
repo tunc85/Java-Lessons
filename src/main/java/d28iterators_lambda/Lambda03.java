@@ -18,8 +18,8 @@ public class Lambda03 {
         //distinct() metodu, bir akistaki tekrar eden ogeleri kaldirmak icin kullanilir
         nums.
                 stream().
-                distinct().
-                filter(t -> t % 2 != 0).
+                distinct(). // 2 , 3 ,5 ,10
+                filter(t -> t % 2 != 0). // 3 5
                 map(t -> t * t * t).
                 forEach(t -> System.out.print(t + " "));//27 125
     }

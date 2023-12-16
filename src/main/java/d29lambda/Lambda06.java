@@ -10,20 +10,40 @@ public class Lambda06 {
         //maksimum1(nums);
         //maksimum2(nums);
         //maksimum3(nums);
-        maksimum4(nums);
+        Integer min = minimumSayi(nums);
+        Integer max =  maximumSayi(nums);
 
+        System.out.println("Maksimum sayi  " + min + " " +"Minumum sayi " + max);
     }//main disi
 
     //1)Verilen List'teki "maksimum değeri" bulmak için bir method oluşturun
     //1.yol:
-    public static void maksimum1(List<Integer> nums) {
+    public static Integer maximumSayi(List<Integer> nums) {
         //Integer.MIN_VALUE: Bu, int tipinin alabileceği en küçük değeri verir (-2^31 dir)
         //Akistaki herhangi bir sayi, bu degerden buyuktur
         //2, 2, 4, 5, 11, 10
 
-        int max = nums.stream().distinct().reduce(Integer.MIN_VALUE, (t, u) -> t > u ? t : u);
-        System.out.println(max); //11
+        int max = nums.
+                stream(). // akis
+                distinct(). // tekrarlilar giti
+                reduce(Integer.MAX_VALUE, (t, u) -> t < u ? t : u);
+        System.out.println(max); //2
 
+        return max;
+    }
+
+    public static Integer minimumSayi(List<Integer> nums) {
+        //Integer.MIN_VALUE: Bu, int tipinin alabileceği en küçük değeri verir (-2^31 dir)
+        //Akistaki herhangi bir sayi, bu degerden buyuktur
+        //2, 2, 4, 5, 11, 10
+
+        int min = nums.
+                stream(). // akis
+                        distinct(). // tekrarlilar giti
+                        reduce(Integer.MIN_VALUE, (t, u) -> t > u ? t : u);
+        System.out.println(min);
+
+        return min ;
     }
 
     //2.yol:
